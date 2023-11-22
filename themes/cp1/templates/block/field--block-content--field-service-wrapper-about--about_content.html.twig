@@ -1,0 +1,17 @@
+{% for item in items %}
+  <div class="our-services-wrappp-inner">
+    <div class="row">
+      <div class="col-lg-6 content-wrapper">
+        <h3>
+        <span class="icon"><img src="{{ file_url(item.content['#options']['entity'].field_service_icon.entity.uri.value) }}" alt="icon"></span>
+          {{ item.content['#options']['entity'].field_service_name.value|striptags('<h3>')|raw }}</h3>
+          <p>{{ item.content['#options']['entity'].field_service_detail.value|raw }}</p>
+      </div>
+        <div class="col-lg-6">
+          <div class="img-wrapper">
+            <img src="{{ file_url(item.content['#options']['entity'].field_service_image.entity.uri.value) }}">
+          </div>
+        </div>
+      </div>
+    </div>
+{% endfor %}

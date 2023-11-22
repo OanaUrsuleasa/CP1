@@ -1,0 +1,10 @@
+global:
+  version: 1.0
+  css:
+    theme:
+      css/style_home.css: {}
+  js:
+      js/custom.js: {}
+  dependencies:
+    - core/jquery
+
